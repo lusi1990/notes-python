@@ -1,4 +1,3 @@
-
 # coding: utf-8
 
 # # 将笔记转化为不同的文件格式
@@ -11,7 +10,6 @@ import os.path
 import nbconvert
 import glob
 
-
 # 检查路径是否存在，删除旧的文件：
 
 # In[ ]:
@@ -19,17 +17,16 @@ import glob
 
 if not os.path.exists('static-files'):
     os.mkdir('static-files')
-    
+
 for n in glob.glob('static-files/*/*/*'):
     os.remove(n)
-
 
 # 文件夹：
 
 # In[ ]:
 
 
-folders = ['01-python-tools', 
+folders = ['01-python-tools',
            '02-python-essentials',
            '03-numpy',
            '04-scipy',
@@ -41,8 +38,7 @@ folders = ['01-python-tools',
            '10-something-interesting',
            '11-useful-tools',
            '12-pandas'
-          ]
-
+           ]
 
 # 遍历文件夹得到所有的文件名：
 
@@ -64,12 +60,12 @@ def convert_to_files(names, to_format):
     for folder in folders:
         if not os.path.exists(os.path.join(target_dir, folder)):
             os.makedirs(os.path.join(target_dir, folder))
-    
+
     for file_name in names:
         p = nbconvert.export(nbconvert.get_exporter(to_format), file_name)
         with open(os.path.join(target_dir, file_name[:-6] + p[1]["output_extension"]), 'w') as f:
             f.write(p[0].encode("utf-8"))
-        print file_name
+        print(file_name)
 
 
 # 转化 HTML 文件：
@@ -78,7 +74,6 @@ def convert_to_files(names, to_format):
 
 
 convert_to_files(file_names, "html")
-
 
 # 产生新目录：
 
@@ -89,4 +84,3 @@ with open('index.md') as f:
     text = f.read()
     with open(os.path.join("static-files", "html", "README.md"), "w") as g:
         g.write(text.replace(".ipynb", ".html"))
-
