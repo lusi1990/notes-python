@@ -19,7 +19,6 @@ https://item.jd.com/12328920.html
 
 天猫、亚马逊、当当均有销售。
 
-**打赏一下意思意思？**
 
 ![](payment.jpeg)
 
