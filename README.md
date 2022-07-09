@@ -19,6 +19,7 @@ https://item.jd.com/12328920.html
 
 天猫、亚马逊、当当均有销售。
 
+**打赏一下意思意思？**
 
 ![](payment.jpeg)
 
@@ -28,7 +29,7 @@ https://item.jd.com/12328920.html
 
 大部分内容来自网络。
 
-默认安装了 `Python 2.7`，以及相关的第三方包 `ipython`， `numpy`， `scipy`，`pandas`。
+默认安装了 `Python 2.7` (本项目后面会慢慢升级的到 3.8)，以及相关的第三方包 `ipython`， `numpy`， `scipy`，`pandas`。
 
 > life is short. use python.
 
